@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="goalsFixture">
+        <item>
+            <isApproved>true</isApproved>
+            <startDate>2018-02-02</startDate>
+            <frequency>0000010</frequency>
+            <title>go to the gym</title>
+            <description>go the the gym and do some cardio</description>
+            <allowance>.5</allowance>
+            <guardianId>g</guardianId>
+            <wardId>w</wardId>
+            <repeats>true</repeats>
+        </item>
+    </array>
+</resources>

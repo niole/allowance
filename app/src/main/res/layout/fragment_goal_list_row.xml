@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="goal" type="com.niole.allowance.Goal"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/goal_list_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/goal_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_alignParentTop="true"
+            android:text="@{goal.title}" />
+
+        <TextView
+            android:id="@+id/goal_duedate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/goal_reward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{Double.toString(goal.allowance)}"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+</layout>

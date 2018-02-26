@@ -1,5 +1,6 @@
 package com.niole.allowance
 
+import java.io.Serializable
 import java.util.*
 
 data class Goal(
@@ -12,4 +13,4 @@ data class Goal(
         val guardianId: String,
         val wardId: String,
         val repeats: Boolean
-)
+) : Serializable
