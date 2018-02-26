@@ -15,7 +15,8 @@ class FragmentGoal : Fragment() {
             args.putSerializable("goal", goal)
 
             val view = FragmentGoal()
-            view.setArguments(args)
+
+            view.arguments = args
 
             return view
         }
@@ -23,8 +24,7 @@ class FragmentGoal : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedState: Bundle?): View? {
         super.onCreate(savedState)
-
-        val goal: Goal? = savedState?.getSerializable("goal") as Goal
+        val goal: Goal? = arguments.getSerializable("goal") as Goal
 
         val fragmentGoalBinding = FragmentGoalBinding.inflate(inflater!!,
                 container, false)
