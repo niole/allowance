@@ -20,20 +20,19 @@ class MainTabsAdapter(fm: FragmentManager, private val context: Context) : Fragm
     }
 
     override fun getItem(position: Int): Fragment {
-        var view: Fragment = showGoalView()
         if (position == 0) {
-            view = showGoalView()
+            return FragmentAddGoal.newInstance()
         }
 
         if (position == 1) {
-            view = showGoalsListView()
+            return showGoalsListView()
         }
 
         if (position == 2) {
-            view = showGoalView()
+            return showGoalView()
         }
 
-        return view
+        return showGoalView()
     }
 
     private fun showGoalsListView(): Fragment {
